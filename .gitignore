@@ -1,7 +1,7 @@
 
 *.exe
 # Godot-specific ignores
-.import/
+/Game/Godot Project/.import/
 export.cfg
 export_presets.cfg
 
