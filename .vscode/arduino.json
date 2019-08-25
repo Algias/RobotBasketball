@@ -1,0 +1,4 @@
+{
+    "sketch": "Robot\\ArduinoCode\\Robot_Main\\Robot_Main.ino",
+    "board": "arduino:avr:uno"
+}
