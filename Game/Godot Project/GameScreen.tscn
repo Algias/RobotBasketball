@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GamePadInput.gd" type="Script" id=1]
+[ext_resource path="res://RobotControl.gd" type="Script" id=2]
+[ext_resource path="res://SendDummyPosition.gd" type="Script" id=3]
+[ext_resource path="res://Timer.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 26.6833
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25, 25 )
+
+[sub_resource type="DynamicFont" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1025.0
+margin_bottom = 600.0
+
+[node name="Hoop" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TimerL" type="RichTextLabel" parent="."]
+margin_left = 9.0
+margin_top = 558.0
+margin_right = 49.0
+margin_bottom = 574.0
+text = "Timer"
+
+[node name="ScoreL" type="RichTextLabel" parent="."]
+margin_left = 984.0
+margin_top = 551.0
+margin_right = 1024.0
+margin_bottom = 567.0
+text = "Score"
+
+[node name="Score" type="RichTextLabel" parent="ScoreL"]
+margin_left = -1.0
+margin_top = 17.0
+margin_right = 39.0
+margin_bottom = 34.0
+size_flags_horizontal = 0
+
+[node name="Ball" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 1 )
+
+[node name="Robot" type="Area2D" parent="."]
+position = Vector2( 300, 300 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Robot"]
+shape = SubResource( 2 )
+
+[node name="SendDummyPosition" type="Button" parent="."]
+margin_left = 472.0
+margin_top = 556.0
+margin_right = 557.0
+margin_bottom = 597.0
+text = "Position"
+script = ExtResource( 3 )
+
+[node name="Timer" type="RichTextLabel" parent="."]
+margin_left = 5.0
+margin_top = 574.0
+margin_right = 543.0
+margin_bottom = 940.0
+rect_scale = Vector2( 0.230694, 0.256795 )
+custom_fonts/normal_font = SubResource( 3 )
+visible_characters = 16
+script = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="Timer"]
+[connection signal="pressed" from="SendDummyPosition" to="SendDummyPosition" method="_on_SendDummyPosition_pressed"]

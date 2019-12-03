@@ -9,7 +9,8 @@
                 "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
                 "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\**",
                 "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\**",
-                "C:\\Program Files (x86)\\Arduino\\libraries\\**"
+                "C:\\Program Files (x86)\\Arduino\\libraries\\**",
+                "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\**"
             ],
             "defines": [
                 "USBCON"
@@ -27,7 +28,8 @@
                     "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
                     "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\lib\\gcc\\avr\\**",
                     "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\include\\**",
-                    "C:\\Program Files (x86)\\Arduino\\libraries\\**"
+                    "C:\\Program Files (x86)\\Arduino\\libraries\\**",
+                    "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\**"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
@@ -74,6 +76,14 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\EWMA",
+                "C:\\Users\\bmgro\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
+                "C:\\Users\\bmgro\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.5.2\\**",
+                "C:\\Program Files (x86)\\Arduino\\tools\\**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\FastPID\\src",
+                "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\PID",
+                "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\EnableInterrupt",
                 "C:\\Users\\bmgro\\Documents\\Arduino\\libraries\\PCA9685\\src"
             ],
             "forcedInclude": [

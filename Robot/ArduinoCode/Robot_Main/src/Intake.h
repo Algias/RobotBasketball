@@ -3,16 +3,25 @@
 
 #include "Actuator.h"
 #include "Sensor.h"
+#include "Constants.h"
+class Intake
+{
+public:
+  Intake(Adafruit_PWMServoDriver &pwm, byte IntakeServoPin, byte IntakeServoPin2,
+         byte IntakeFeedbackPin);
+  ~Intake();
 
-class Intake {
-    public:
-        Intake(int IntakeServoPin, int IntakeFeedbackPin);
-        ~Intake();
+  I2CActuator intakeServo;
+  I2CActuator intakeServo2;
+  DigitalInput limitSwitch;
+  void readInputs();
+  void writeOutputs();
+  void process();
 
-        Actuator intakeServo;
-        Sensor limitSwitch;
-    private:
+  void setPosition(int position);
 
+private:
+  Adafruit_PWMServoDriver &_pwm;
 };
 
 #endif

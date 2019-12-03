@@ -15,8 +15,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="SD2019"
+config/name="Game GUI"
+run/main_scene="res://MainScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
+communication="*res://communication.gd"
 
 [rendering]
 
